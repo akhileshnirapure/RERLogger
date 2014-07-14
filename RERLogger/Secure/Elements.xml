@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Document (0x0101) -->
+  <ContentType ID="0x010100C809F5DDFE214C0886E356E3050075AB" Name="Secure" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{ec21f546-77fd-4bb6-abef-9773b15df2b8}" DisplayName="Document Id" Required="FALSE" Name="DocumentId" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

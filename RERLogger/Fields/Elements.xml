@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{ec21f546-77fd-4bb6-abef-9773b15df2b8}"
+       Name="Fields"
+       DisplayName="Document Id"
+       Type="Text"
+       Required="FALSE"
+       Group="Custom Site Columns">
+    <Default>0</Default>
+  </Field>
+</Elements>

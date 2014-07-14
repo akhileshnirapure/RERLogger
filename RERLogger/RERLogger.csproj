@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE4352F1-C105-4AA3-8B27-A6C45F464806}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharePointApp3</RootNamespace>
+    <AssemblyName>SharePointApp3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.1</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{889d7590-e28f-4452-952b-a61fd54a01a0}</AppFeaturePartId>
+    <WspPartId>{24fca5a1-5544-4f7b-8d60-c3850c06ad1c}</WspPartId>
+    <WorkflowPartId>{862b7765-bbec-4297-9c06-2506f550ab50}</WorkflowPartId>
+    <CspkgPartId>{981fdbfc-603b-4b71-972f-c5be99eba994}</CspkgPartId>
+    <SqlPackagePartId>{1db717b0-bc2b-4b54-9ce1-c5c4a31718b3}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Fields\Elements.xml" />
+    <Content Include="Features\Core\Core.Template.xml">
+      <DependentUpon>Core.feature</DependentUpon>
+    </Content>
+    <Content Include="General\EditDlg.htm" />
+    <Content Include="General\Elements.xml" />
+    <Content Include="General\FileDlg.htm" />
+    <Content Include="General\GeneralInstance\Elements.xml" />
+    <Content Include="General\Repair.aspx" />
+    <Content Include="General\Schema.xml" />
+    <Content Include="General\Upload.aspx" />
+    <Content Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </Content>
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Sample.txt" />
+    <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Secure\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RERLogger.Web\RERLogger.Web.csproj">
+      <Project>{81FCA2C4-6984-49E4-8CFD-F7CA763689D4}</Project>
+      <Name>RERLogger.Web</Name>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <OutputItemType>SharePointWebProjectOutput</OutputItemType>
+      <RoleName>SharePointApp3Web</RoleName>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Fields\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7821af19-ac72-4f67-a69d-5f5588056c25}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Core\Core.feature">
+      <FeatureId>{3ed09689-62f3-4163-8b43-a57e5f26d065}</FeatureId>
+    </None>
+    <None Include="General\GeneralInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1ac013a1-f6dd-4e04-bc65-b5d3480aedb9}</SharePointProjectItemId>
+    </None>
+    <None Include="General\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a74e9e35-ccc5-4983-8e65-384e266b29f0}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{7e0c7e5f-7376-452e-9d0c-26b337518f0f}</PackageId>
+    </None>
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5ee623e1-8598-4733-83f6-5b0bc4f14159}</SharePointProjectItemId>
+    </None>
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{50b34da2-3a6e-4c44-87a7-c37fa2b9abbf}</SharePointProjectItemId>
+    </None>
+    <None Include="Secure\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{208204d3-5d97-403e-9a06-5af53be70895}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

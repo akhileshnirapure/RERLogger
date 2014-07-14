@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RERLogger.Web.Services.LogItemEventReceiver" CodeBehind="LogItemEventReceiver.svc.cs" %>
